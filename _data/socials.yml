@@ -12,3 +12,7 @@ scholar_userid: qc6CJjYAAAAJ # your Google Scholar ID
 #   logo: https://www.alberteinstein.com/wp-content/uploads/2024/03/cropped-favicon-192x192.png # can be png, svg, jpg
 #   title: Custom Social
 #   url: https://www.alberteinstein.com/
+# custom_social:
+#   logo: /assets/img/mail.svg
+#   title: Secondary email
+#   url: mailto:secondary@example.com
