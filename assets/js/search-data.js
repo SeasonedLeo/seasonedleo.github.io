@@ -451,9 +451,9 @@ ninja.data = [{
             },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
           title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
           description: "",
-          section: "News",},{id: "projects-project-1",
-          title: 'project 1',
-          description: "with background image",
+          section: "News",},{id: "projects-predictor-compensated-clf-qp-for-vehicle-tracking-with-sensing-and-actuation-delays",
+          title: 'Predictor-Compensated CLF-QP for Vehicle Tracking with Sensing and Actuation Delays',
+          description: "Delay-aware control for teleoperated vehicle tracking using CLF-QP with SQP.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
             },},{id: "projects-project-2",
