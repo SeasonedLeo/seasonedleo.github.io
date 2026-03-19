@@ -11,10 +11,10 @@ links:
     url: /assets/pdf/example_pdf.pdf
   - label: Page
     url: /publications/brownian-movement/
-logos:
-  - image: https://upload.wikimedia.org/wikipedia/commons/9/9a/Seal_of_the_Princeton_University.svg
-    alt: Princeton
-    url: https://www.princeton.edu/
+# logos:
+#   - image: https://upload.wikimedia.org/wikipedia/commons/9/9a/Seal_of_the_Princeton_University.svg
+#     alt: Princeton
+#     url: https://www.princeton.edu/
 video: https://youtu.be/sztc832hw0c
 video_caption: Example video embed for the publication.
 abstract: >
