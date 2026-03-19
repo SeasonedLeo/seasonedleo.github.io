@@ -32,7 +32,9 @@ Use this section to add a short summary, contributions, or images for the paper.
 - You can embed images using the standard include tag:
 
 {% raw %}
+
 ```liquid
 {% include figure.liquid path="/assets/img/example.jpg" title="Caption" %}
 ```
+
 {% endraw %}
