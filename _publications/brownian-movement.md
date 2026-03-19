@@ -1,12 +1,22 @@
 ---
 layout: publication
-# title: Investigations on the Theory of the Brownian Movement
-authors: Albert Einstein
+title: "Investigations on the Theory of the Brownian Movement"
+authors:
+  - name: Albert Einstein
+    url: https://en.wikipedia.org/wiki/Albert_Einstein
 venue: Courier Corporation
 year: 1956
 links:
   - label: PDF
     url: /assets/pdf/example_pdf.pdf
+  - label: Page
+    url: /publications/brownian-movement/
+logos:
+  - image: https://upload.wikimedia.org/wikipedia/commons/9/9a/Seal_of_the_Princeton_University.svg
+    alt: Princeton
+    url: https://www.princeton.edu/
+teaser: /assets/img/publication_preview/brownian-motion.gif
+teaser_caption: Example figure or diagram for the publication.
 abstract: >
   Replace this with the abstract or a short summary of the work.
 bibtex: |
@@ -24,7 +34,3 @@ bibtex: |
 ## Overview
 
 Add a concise overview, key contributions, or results.
-
-## Figures
-
-Use standard includes for images if needed.

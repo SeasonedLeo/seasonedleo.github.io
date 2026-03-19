@@ -7,15 +7,24 @@ layout: page
 
     {% if page.authors %}
       <div class="pub-authors">
-        {{ page.authors }}
+        {% if page.authors.size %}
+          {% for author in page.authors %}
+            {% if author.url %}
+              <a href="{{ author.url }}">{{ author.name }}</a>
+            {% else %}
+              {{ author.name }}
+            {% endif %}
+            {% unless forloop.last %}, {% endunless %}
+          {% endfor %}
+        {% else %}
+          {{ page.authors }}
+        {% endif %}
       </div>
     {% endif %}
 
     {% if page.venue or page.year %}
       <div class="pub-venue">
-        {% if page.venue %}{{ page.venue }}{% endif -%}
-        {%- if page.venue and page.year %} Â· {% endif -%}
-        {%- if page.year %}{{ page.year }}{% endif %}
+        {% if page.venue %}{{ page.venue }}{% endif %}{% if page.venue and page.year %} · {% endif %}{% if page.year %}{{ page.year }}{% endif %}
       </div>
     {% endif %}
 
@@ -26,7 +35,28 @@ layout: page
         {% endfor %}
       </div>
     {% endif %}
+
+    {% if page.logos %}
+      <div class="pub-logos">
+        {% for logo in page.logos %}
+          {% if logo.url %}
+            <a href="{{ logo.url }}">
+              <img src="{{ logo.image }}" alt="{{ logo.alt }}">
+            </a>
+          {% else %}
+            <img src="{{ logo.image }}" alt="{{ logo.alt }}">
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endif %}
   </header>
+
+  {% if page.abstract %}
+    <section class="pub-abstract">
+      <h2>Abstract</h2>
+      {{ page.abstract | markdownify }}
+    </section>
+  {% endif %}
 
   {% if page.teaser %}
     <div class="pub-teaser">
@@ -34,8 +64,7 @@ layout: page
         <img class="img-fluid rounded z-depth-1" src="{{ page.teaser }}" alt="{{ page.title }}">
       {% else %}
         {% capture pub_sizes %}(min-width: {{ site.max_width }}) {{ site.max_width }}, 95vw{% endcapture %}
-        {%
-          include figure.liquid
+        {% include figure.liquid
           loading="eager"
           path=page.teaser
           class="img-fluid rounded z-depth-1"
@@ -43,13 +72,18 @@ layout: page
           alt=page.title
         %}
       {% endif %}
+      {% if page.teaser_caption %}
+        <p class="pub-teaser-caption">{{ page.teaser_caption }}</p>
+      {% endif %}
     </div>
   {% endif %}
 
-  {% if page.abstract %}
-    <section class="pub-abstract">
-      <h2>Abstract</h2>
-      {{ page.abstract | markdownify }}
+  {% if page.bibtex %}
+    <section class="pub-bibtex">
+      <h2>BibTeX</h2>
+      {% highlight bibtex %}
+      {{- page.bibtex | strip -}}
+      {% endhighlight %}
     </section>
   {% endif %}
 
@@ -67,15 +101,6 @@ layout: page
   {% if content and content != '' %}
     <section class="pub-content">
       {{ content }}
-    </section>
-  {% endif %}
-
-  {% if page.bibtex %}
-    <section class="pub-bibtex">
-      <h2>BibTeX</h2>
-      {% highlight bibtex %}
-      {{- page.bibtex | strip -}}
-      {% endhighlight %}
     </section>
   {% endif %}
 </article>

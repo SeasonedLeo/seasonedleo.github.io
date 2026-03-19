@@ -1,7 +1,9 @@
 ---
 layout: publication
 title: "Relativity: The Special and General Theory"
-authors: Albert Einstein
+authors:
+  - name: Albert Einstein
+    url: https://en.wikipedia.org/wiki/Albert_Einstein
 venue: Methuen & Co Ltd
 year: 1920
 links:
@@ -9,6 +11,14 @@ links:
     url: /assets/html/relativity.html
   - label: PDF
     url: /assets/pdf/example_pdf.pdf
+  - label: Page
+    url: /publications/relativity/
+logos:
+  - image: https://upload.wikimedia.org/wikipedia/commons/9/9a/Seal_of_the_Princeton_University.svg
+    alt: Princeton
+    url: https://www.princeton.edu/
+teaser: /assets/img/publication_preview/brownian-motion.gif
+teaser_caption: Example figure or diagram for the publication.
 abstract: >
   This page is a template you can copy for each publication. Replace this
   abstract with your own.
@@ -25,16 +35,3 @@ bibtex: |
 ## Overview
 
 Use this section to add a short summary, contributions, or images for the paper.
-
-## Results
-
-- Add key findings or figures here.
-- You can embed images using the standard include tag:
-
-{% raw %}
-
-```liquid
-{% include figure.liquid path="/assets/img/example.jpg" title="Caption" %}
-```
-
-{% endraw %}

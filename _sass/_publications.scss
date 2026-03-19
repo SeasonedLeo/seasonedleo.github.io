@@ -188,40 +188,105 @@
 }
 
 .publication-page {
+  max-width: 920px;
+  margin: 0 auto;
+
   .pub-hero {
-    margin-bottom: 2rem;
+    text-align: center;
+    margin: 2rem 0 1.5rem;
   }
 
   .pub-title {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
   }
 
   .pub-authors {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     color: var(--global-text-color);
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.4rem;
+
+    a {
+      color: var(--global-text-color);
+      border-bottom: 1px solid transparent;
+
+      &:hover {
+        border-bottom-color: var(--global-text-color);
+        text-decoration: none;
+      }
+    }
   }
 
   .pub-venue {
     color: var(--global-text-color-light);
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.9rem;
   }
 
   .pub-links {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 0.5rem;
+    margin-bottom: 0.75rem;
+
+    a.btn {
+      border-radius: 999px;
+      font-weight: 500;
+      border: 1px solid var(--global-text-color);
+    }
+  }
+
+  .pub-logos {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 0.75rem;
+    flex-wrap: wrap;
+
+    img {
+      height: 42px;
+      width: auto;
+      display: block;
+      opacity: 0.85;
+    }
+  }
+
+  .pub-abstract {
+    margin: 1.5rem 0 1rem;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 0.75rem;
+    }
   }
 
   .pub-teaser {
     margin: 1.5rem 0 2rem;
+    text-align: center;
+
+    img {
+      max-width: 100%;
+    }
   }
 
-  .pub-abstract,
-  .pub-highlights,
-  .pub-content,
+  .pub-teaser-caption {
+    font-size: 0.95rem;
+    color: var(--global-text-color-light);
+    margin-top: 0.5rem;
+  }
+
   .pub-bibtex {
+    margin: 1.5rem 0;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 0.75rem;
+    }
+  }
+
+  .pub-highlights,
+  .pub-content {
     margin: 1.5rem 0;
   }
 }
