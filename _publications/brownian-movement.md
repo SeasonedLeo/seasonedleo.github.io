@@ -1,6 +1,6 @@
 ---
 layout: publication
-title: Investigations on the Theory of the Brownian Movement
+# title: Investigations on the Theory of the Brownian Movement
 authors: Albert Einstein
 venue: Courier Corporation
 year: 1956
