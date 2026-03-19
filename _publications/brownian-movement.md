@@ -15,8 +15,8 @@ logos:
   - image: https://upload.wikimedia.org/wikipedia/commons/9/9a/Seal_of_the_Princeton_University.svg
     alt: Princeton
     url: https://www.princeton.edu/
-teaser: /assets/img/publication_preview/brownian-motion.gif
-teaser_caption: Example figure or diagram for the publication.
+video: https://youtu.be/sztc832hw0c
+video_caption: Example video embed for the publication.
 abstract: >
   Replace this with the abstract or a short summary of the work.
 bibtex: |

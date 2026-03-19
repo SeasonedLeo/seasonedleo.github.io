@@ -24,9 +24,7 @@ layout: page
 
     {% if page.venue or page.year %}
       <div class="pub-venue">
-        {% if page.venue %}{{ page.venue }}{% endif -%}
-        {%- if page.venue and page.year %} � {% endif -%}
-        {%- if page.year %}{{ page.year }}{% endif %}
+        {% if page.venue %}{{ page.venue }}{% endif %}{% if page.venue and page.year %} - {% endif %}{% if page.year %}{{ page.year }}{% endif %}
       </div>
     {% endif %}
 
@@ -60,14 +58,28 @@ layout: page
     </section>
   {% endif %}
 
-  {% if page.teaser %}
+  {% if page.video %}
+    <div class="pub-video">
+      <div class="pub-video-frame">
+        <iframe
+          src="https://www.youtube.com/embed/{{ page.video | replace: 'https://youtu.be/', '' | replace: 'https://www.youtube.com/watch?v=', '' }}"
+          title="{{ page.title }}"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+      {% if page.video_caption %}
+        <p class="pub-teaser-caption">{{ page.video_caption }}</p>
+      {% endif %}
+    </div>
+  {% elsif page.teaser %}
     <div class="pub-teaser">
       {% if page.teaser contains '://' %}
         <img class="img-fluid rounded z-depth-1" src="{{ page.teaser }}" alt="{{ page.title }}">
       {% else %}
         {% capture pub_sizes %}(min-width: {{ site.max_width }}) {{ site.max_width }}, 95vw{% endcapture %}
-        {%
-          include figure.liquid
+        {% include figure.liquid
           loading="eager"
           path=page.teaser
           class="img-fluid rounded z-depth-1"
