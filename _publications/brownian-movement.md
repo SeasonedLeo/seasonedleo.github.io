@@ -34,5 +34,3 @@ bibtex: |
     landing     = {brownian-movement}
   }
 ---
-
-
