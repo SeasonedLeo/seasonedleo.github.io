@@ -13,7 +13,9 @@ layout: page
 
     {% if page.venue or page.year %}
       <div class="pub-venue">
-        {% if page.venue %}{{ page.venue }}{% endif %}{% if page.venue and page.year %} · {% endif %}{% if page.year %}{{ page.year }}{% endif %}
+        {% if page.venue %}{{ page.venue }}{% endif -%}
+        {%- if page.venue and page.year %} · {% endif -%}
+        {%- if page.year %}{{ page.year }}{% endif %}
       </div>
     {% endif %}
 
@@ -61,7 +63,7 @@ layout: page
     </section>
   {% endif %}
 
-  {% if content and content != "" %}
+  {% if content and content != '' %}
     <section class="pub-content">
       {{ content }}
     </section>

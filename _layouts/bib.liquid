@@ -48,7 +48,7 @@
   <!-- Entry bib key -->
   <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
     <!-- Title -->
-    {% assign entry_landing_url = nil %}
+    {% assign entry_landing_url = null %}
     {% if entry.landing %}
       {% if entry.landing contains '://' %}
         {% assign entry_landing_url = entry.landing %}
