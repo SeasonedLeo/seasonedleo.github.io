@@ -496,8 +496,8 @@ ninja.data = [{
           description: "another project with an image 🎉",
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project/";
-            },},{id: "publications-brownian-movement",
-          title: 'Brownian Movement',
+            },},{id: "publications-investigations-on-the-theory-of-the-brownian-movement",
+          title: 'Investigations on the Theory of the Brownian Movement',
           description: "",
           section: "Publications",handler: () => {
               window.location.href = "/publications/brownian-movement/";
