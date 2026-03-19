@@ -1,7 +1,7 @@
 ---
 layout: publication
 show_title: false
-# title: "Investigations on the Theory of the Brownian Movement"
+title: "Investigations on the Theory of the Brownian Movement"
 authors:
   - name: Albert Einstein
     url: https://en.wikipedia.org/wiki/Albert_Einstein
@@ -20,10 +20,6 @@ video: https://youtu.be/sztc832hw0c
 video_caption: Example video embed for the publication.
 abstract: >
   Replace this with the abstract or a short summary of the work.
-  
-## Overview
-
-Add a concise overview, key contributions, or results.
 bibtex: |
   @book{einstein1956investigations,
     bibtex_show = {true},
@@ -35,3 +31,7 @@ bibtex: |
     landing     = {brownian-movement}
   }
 ---
+
+## Overview
+
+Add a concise overview, key contributions, or results.
