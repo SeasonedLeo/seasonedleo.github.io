@@ -160,6 +160,9 @@ collections:
     defaults:
       layout: post
     output: true
+  publications:
+    output: true
+    permalink: /publications/:name/
   projects:
     output: true
   teachings:
@@ -338,6 +341,7 @@ filtered_bibtex_keywords:
     selected,
     slides,
     supp,
+    landing,
     video,
     website,
   ]

@@ -186,3 +186,42 @@
 .citation-number {
   color: var(--global-theme-color);
 }
+
+.publication-page {
+  .pub-hero {
+    margin-bottom: 2rem;
+  }
+
+  .pub-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .pub-authors {
+    font-size: 1.1rem;
+    color: var(--global-text-color);
+    margin-bottom: 0.25rem;
+  }
+
+  .pub-venue {
+    color: var(--global-text-color-light);
+    margin-bottom: 0.75rem;
+  }
+
+  .pub-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .pub-teaser {
+    margin: 1.5rem 0 2rem;
+  }
+
+  .pub-abstract,
+  .pub-highlights,
+  .pub-content,
+  .pub-bibtex {
+    margin: 1.5rem 0;
+  }
+}

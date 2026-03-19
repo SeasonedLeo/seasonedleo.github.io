@@ -1,0 +1,78 @@
+---
+layout: page
+---
+<article class="publication-page">
+  <header class="pub-hero">
+    <h1 class="pub-title">{{ page.title }}</h1>
+
+    {% if page.authors %}
+      <div class="pub-authors">
+        {{ page.authors }}
+      </div>
+    {% endif %}
+
+    {% if page.venue or page.year %}
+      <div class="pub-venue">
+        {% if page.venue %}{{ page.venue }}{% endif %}{% if page.venue and page.year %} · {% endif %}{% if page.year %}{{ page.year }}{% endif %}
+      </div>
+    {% endif %}
+
+    {% if page.links %}
+      <div class="pub-links">
+        {% for link in page.links %}
+          <a class="btn btn-sm z-depth-0" href="{{ link.url }}">{{ link.label }}</a>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </header>
+
+  {% if page.teaser %}
+    <div class="pub-teaser">
+      {% if page.teaser contains '://' %}
+        <img class="img-fluid rounded z-depth-1" src="{{ page.teaser }}" alt="{{ page.title }}">
+      {% else %}
+        {%
+          include figure.liquid
+          loading="eager"
+          path=page.teaser
+          class="img-fluid rounded z-depth-1"
+          sizes="(min-width: {{ site.max_width }}) {{ site.max_width }}, 95vw"
+          alt=page.title
+        %}
+      {% endif %}
+    </div>
+  {% endif %}
+
+  {% if page.abstract %}
+    <section class="pub-abstract">
+      <h2>Abstract</h2>
+      {{ page.abstract | markdownify }}
+    </section>
+  {% endif %}
+
+  {% if page.highlights %}
+    <section class="pub-highlights">
+      <h2>Highlights</h2>
+      <ul>
+        {% for item in page.highlights %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endif %}
+
+  {% if content and content != "" %}
+    <section class="pub-content">
+      {{ content }}
+    </section>
+  {% endif %}
+
+  {% if page.bibtex %}
+    <section class="pub-bibtex">
+      <h2>BibTeX</h2>
+      {% highlight bibtex %}
+      {{- page.bibtex | strip -}}
+      {% endhighlight %}
+    </section>
+  {% endif %}
+</article>

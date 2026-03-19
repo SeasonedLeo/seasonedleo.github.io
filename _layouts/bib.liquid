@@ -48,7 +48,21 @@
   <!-- Entry bib key -->
   <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
     <!-- Title -->
-    <div class="title">{{ entry.title }}</div>
+    {% assign entry_landing_url = nil %}
+    {% if entry.landing %}
+      {% if entry.landing contains '://' %}
+        {% assign entry_landing_url = entry.landing %}
+      {% else %}
+        {% assign entry_landing_url = entry.landing | prepend: '/publications/' | append: '/' | relative_url %}
+      {% endif %}
+    {% endif %}
+    <div class="title">
+      {% if entry_landing_url %}
+        <a href="{{ entry_landing_url }}">{{ entry.title }}</a>
+      {% else %}
+        {{ entry.title }}
+      {% endif %}
+    </div>
     <!-- Author -->
     <div class="author">
       {% assign author_array_size = entry.author_array | size %}
@@ -257,6 +271,9 @@
       {% endif %}
       {% if entry.website %}
         <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" role="button">Website</a>
+      {% endif %}
+      {% if entry_landing_url %}
+        <a href="{{ entry_landing_url }}" class="btn btn-sm z-depth-0" role="button">Page</a>
       {% endif %}
     </div>
     {% if site.enable_publication_badges %}
