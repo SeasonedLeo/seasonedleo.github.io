@@ -1,5 +1,6 @@
 ---
 layout: publication
+show_title: false
 title: "Relativity: The Special and General Theory"
 authors:
   - name: Albert Einstein

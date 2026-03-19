@@ -1,5 +1,6 @@
 ---
 layout: publication
+show_title: false
 # title: "Investigations on the Theory of the Brownian Movement"
 authors:
   - name: Albert Einstein
