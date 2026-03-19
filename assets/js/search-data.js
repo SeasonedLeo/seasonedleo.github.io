@@ -496,6 +496,16 @@ ninja.data = [{
           description: "another project with an image 🎉",
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project/";
+            },},{id: "publications-investigations-on-the-theory-of-the-brownian-movement",
+          title: 'Investigations on the Theory of the Brownian Movement',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/brownian-movement/";
+            },},{id: "publications-relativity-the-special-and-general-theory",
+          title: 'Relativity: The Special and General Theory',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/relativity/";
             },},{id: "teachings-data-science-fundamentals",
           title: 'Data Science Fundamentals',
           description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",
@@ -511,7 +521,7 @@ ninja.data = [{
         title: 'CV',
         section: 'Socials',
         handler: () => {
-          window.open("/assets/pdf/example_pdf.pdf", "_blank");
+          window.open("/assets/pdf/vikas-narang-resume.pdf", "_blank");
         },
       },{
         id: 'social-email',
