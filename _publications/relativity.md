@@ -1,6 +1,6 @@
 ---
 layout: publication
-title: Relativity: The Special and General Theory
+title: "Relativity: The Special and General Theory"
 authors: Albert Einstein
 venue: Methuen & Co Ltd
 year: 1920

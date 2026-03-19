@@ -33,8 +33,7 @@ layout: page
       {% if page.teaser contains '://' %}
         <img class="img-fluid rounded z-depth-1" src="{{ page.teaser }}" alt="{{ page.title }}">
       {% else %}
-        {%
-          include figure.liquid
+        {% include figure.liquid
           loading="eager"
           path=page.teaser
           class="img-fluid rounded z-depth-1"
