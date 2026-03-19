@@ -24,7 +24,9 @@ layout: page
 
     {% if page.venue or page.year %}
       <div class="pub-venue">
-        {% if page.venue %}{{ page.venue }}{% endif %}{% if page.venue and page.year %} - {% endif %}{% if page.year %}{{ page.year }}{% endif %}
+        {% if page.venue %}{{ page.venue }}{% endif -%}
+        {%- if page.venue and page.year %} - {% endif -%}
+        {%- if page.year %}{{ page.year }}{% endif %}
       </div>
     {% endif %}
 
@@ -79,7 +81,8 @@ layout: page
         <img class="img-fluid rounded z-depth-1" src="{{ page.teaser }}" alt="{{ page.title }}">
       {% else %}
         {% capture pub_sizes %}(min-width: {{ site.max_width }}) {{ site.max_width }}, 95vw{% endcapture %}
-        {% include figure.liquid
+        {%
+          include figure.liquid
           loading="eager"
           path=page.teaser
           class="img-fluid rounded z-depth-1"
