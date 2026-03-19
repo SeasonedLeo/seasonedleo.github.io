@@ -29,4 +29,10 @@ Use this section to add a short summary, contributions, or images for the paper.
 ## Results
 
 - Add key findings or figures here.
-- You can embed images using the standard `{% include figure.liquid ... %}`.
+- You can embed images using the standard include tag:
+
+{% raw %}
+```liquid
+{% include figure.liquid path="/assets/img/example.jpg" title="Caption" %}
+```
+{% endraw %}
