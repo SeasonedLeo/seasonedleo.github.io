@@ -1,18 +1,17 @@
 ---
 layout: page
-title: Visual Odometery 
+title: Visual Odometery
 description: a project with a background image and giscus comments
 img: assets/img/3.jpg
 importance: 2
 category: work
-giscus_comments: false 
-related_publications: false 
+giscus_comments: false
+related_publications: false
 ---
 
 ## Overview
 
 This project studies delay-aware vehicle tracking for teleoperation. The controller combines predictor compensation with a control Lyapunov function quadratic program (CLF-QP) solved via SQP to enforce stability and constraints under sensing and actuation delays.
-
 
 To give your project a background in the portfolio page, just add the img tag to the front matter like so:
 
