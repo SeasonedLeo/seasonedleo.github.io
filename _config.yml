@@ -55,7 +55,7 @@ external_services:
 
 navbar_fixed: true
 footer_fixed: true
-search_enabled: true
+search_enabled: false # set to true to enable search functionality across the site (recommended to set up Algolia or other search service for better search experience)
 socials_in_search: true
 posts_in_search: true
 bib_search: true
