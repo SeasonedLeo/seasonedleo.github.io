@@ -44,7 +44,7 @@ calibrated.
 model the cameras projective geometry through the coordinate
 system transformation. These transformations can
 be used to project points from the world frame
-to the image frame, using the pinhole camera model . 
+to the image frame, using the pinhole camera model .
 
 The intrinsic matrix is:
 
