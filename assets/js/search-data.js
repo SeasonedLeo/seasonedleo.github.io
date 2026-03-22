@@ -414,9 +414,9 @@ ninja.data = [{
           description: "Delay-aware control for teleoperated vehicle tracking using CLF-QP with SQP.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
-            },},{id: "projects-visual-odometery",
-          title: 'Visual Odometery',
-          description: "a project with a background image and giscus comments",
+            },},{id: "projects-visual-odometry",
+          title: 'Visual Odometry',
+          description: "RGB-D visual odometry pipeline with step-by-step implementation details",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
             },},{id: "projects-project-3-with-very-long-name",
